@@ -7,6 +7,9 @@ android {
     namespace = "com.atomasg.randomapiconsumer"
     compileSdk = 33
 
+    viewBinding {
+        enable = true
+    }
     defaultConfig {
         applicationId = "com.atomasg.randomapiconsumer"
         minSdk = 24
