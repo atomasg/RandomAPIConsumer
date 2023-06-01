@@ -42,6 +42,23 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
     }
 
+    public void sendEmail(String email) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{email});
+        intent.setType("test/plain");
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(Intent.createChooser(intent, getString(R.string.Email_client_chooser)));
+        } else {
+            Toast.makeText(this, R.string.no_application_supported,
+                    Toast.LENGTH_SHORT).show();
+        }
 
+    }
+
+    public void callPhone(String phone){
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:"+phone));
+        startActivity(intent);
+    }
 
 }
