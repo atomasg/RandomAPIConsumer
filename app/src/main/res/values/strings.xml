@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">RandomAPIConsumer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contact_list_title">Listado de contactos</string>
+    <string name="contact_details_title">Detalle de contacto</string>
+    <string name="text_filtro">Filtro:</string>
+    <string name="text_filter_male">Male</string>
+    <string name="text_filter_female">Female</string>
+    <string name="text_label_genero">Género</string>
+    <string name="text_label_nombre">Nombre</string>
+    <string name="text_label_usuario">Usuario</string>
+    <string name="text_label_correo">Correo</string>
+    <string name="text_label_telefono">Teléfono</string>
+    <string name="text_label_dirección">Dirección</string>
+    <string name="Email_client_chooser">Elige un cliente de correo:</string>
+    <string name="no_application_supported">No hay aplicacion para esta acción</string>
+    <string name="text_error">Ha ocurrido un error, por favor intentelo de nuevo mas tarde.</string>
+</resources>
