@@ -1,10 +1,8 @@
 
 package com.atomasg.randomapiconsumer.model;
 
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
 
 public class Contact {
 
@@ -85,11 +83,11 @@ public class Contact {
         this.login = login;
     }
 
-    public Birthdate getDob() {
+    public Birthdate getBirthdate() {
         return birthdate;
     }
 
-    public void setDob(Birthdate birthdate) {
+    public void setBirthdate(Birthdate birthdate) {
         this.birthdate = birthdate;
     }
 

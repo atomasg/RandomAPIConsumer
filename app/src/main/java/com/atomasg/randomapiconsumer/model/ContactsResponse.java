@@ -1,30 +1,42 @@
 
 package com.atomasg.randomapiconsumer.model;
 
-import java.util.List;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
 
 public class ContactsResponse {
 
     @SerializedName("results")
     @Expose
-    private List<Contact> results;
+    private List<Contact> contacts;
+    @SerializedName("info")
+    @Expose
+    private Info info;
 
-    public List<Contact> getResults() {
-        return results;
+    public List<Contact> getContacts() {
+        return contacts;
     }
 
-    public void setResults(List<Contact> results) {
-        this.results = results;
+    public void setContacts(List<Contact> contacts) {
+        this.contacts = contacts;
+    }
+
+    public Info getInfo() {
+        return info;
+    }
+
+    public void setInfo(Info info) {
+        this.info = info;
     }
 
     @Override
     public int hashCode() {
         int result = 1;
-        result = ((result* 31)+((this.results == null)? 0 :this.results.hashCode()));
+        result = ((result* 31)+((this.contacts == null)? 0 :this.contacts.hashCode()));
+        result = ((result* 31)+((this.info == null)? 0 :this.info.hashCode()));
         return result;
     }
 
@@ -37,7 +49,7 @@ public class ContactsResponse {
             return false;
         }
         ContactsResponse rhs = ((ContactsResponse) other);
-        return ((this.results == rhs.results)||((this.results!= null)&&this.results.equals(rhs.results)));
+        return (((this.contacts == rhs.contacts)||((this.contacts!= null)&&this.contacts.equals(rhs.contacts)))&&((this.info == rhs.info)||((this.info!= null)&&this.info.equals(rhs.info))));
     }
 
 }

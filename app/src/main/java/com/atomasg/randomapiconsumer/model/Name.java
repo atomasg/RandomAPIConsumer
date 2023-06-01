@@ -2,6 +2,8 @@
 package com.atomasg.randomapiconsumer.model;
 
 
+import androidx.annotation.NonNull;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -45,9 +47,9 @@ public class Name {
     @Override
     public int hashCode() {
         int result = 1;
-        result = ((result* 31)+((this.title == null)? 0 :this.title.hashCode()));
-        result = ((result* 31)+((this.last == null)? 0 :this.last.hashCode()));
-        result = ((result* 31)+((this.first == null)? 0 :this.first.hashCode()));
+        result = ((result * 31) + ((this.title == null) ? 0 : this.title.hashCode()));
+        result = ((result * 31) + ((this.last == null) ? 0 : this.last.hashCode()));
+        result = ((result * 31) + ((this.first == null) ? 0 : this.first.hashCode()));
         return result;
     }
 
@@ -60,7 +62,12 @@ public class Name {
             return false;
         }
         Name rhs = ((Name) other);
-        return ((((this.title == rhs.title)||((this.title!= null)&&this.title.equals(rhs.title)))&&((this.last == rhs.last)||((this.last!= null)&&this.last.equals(rhs.last))))&&((this.first == rhs.first)||((this.first!= null)&&this.first.equals(rhs.first))));
+        return ((((this.title == rhs.title) || ((this.title != null) && this.title.equals(rhs.title))) && ((this.last == rhs.last) || ((this.last != null) && this.last.equals(rhs.last)))) && ((this.first == rhs.first) || ((this.first != null) && this.first.equals(rhs.first))));
     }
 
+    @NonNull
+    @Override
+    public String toString() {
+        return title + " " + first + " " + last;
+    }
 }

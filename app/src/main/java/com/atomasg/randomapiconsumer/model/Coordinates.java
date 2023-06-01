@@ -1,7 +1,6 @@
 
 package com.atomasg.randomapiconsumer.model;
 
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
